@@ -1,9 +1,9 @@
 # javaee jax-rs REST API exmaple 
 
 ## Build and run
-maven build with goal clean package -> generates jax_rs.war file in target folder
+maven build with goal `clean package` -> generates jax_rs.war file in target folder
 
-run on server -> tomcat 8.0 
+run on server -> tested on tomcat 8.0 
 
 Open follwoing URL from browser or REST client -> `http://localhost:8080/jax_rs/rest/hello/<msg>`
 
