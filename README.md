@@ -14,6 +14,6 @@ Open follwoing URL from browser or REST client -> `http://localhost:8080/jax_rs/
 
 	 * Maps to REST API http://localhost:8080/jax_rs/rest/hello/sanket
 	 * @param msg "sanket"
-	 * @return "Jax-rs REST API : sanket"
+	 * @return JSON object with "Jax-rs REST API : sanket"
 	 * @see http://www.mkyong.com/webservices/jax-rs/jersey-hello-world-example/
 	 * @see http://www.mkyong.com/webservices/jax-rs/json-example-with-jersey-jackson/
