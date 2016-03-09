@@ -7,12 +7,16 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
-import com.sun.jersey.core.header.MediaTypes;
-import com.sun.jersey.core.impl.provider.header.MediaTypeProvider;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
  
 @Path("/hello")
+@Api(value="/hello")
 public class HelloWorldExample {
  
 	/**
@@ -24,6 +28,11 @@ public class HelloWorldExample {
 	@GET
 	@Path("/{param}")	
 	@Produces(MediaType.APPLICATION_JSON)
+	@ApiOperation(value = "say hello world", notes ="nothing else")
+	@ApiResponses(value={
+			@ApiResponse(code=200, message="OK"),
+			@ApiResponse(code=500, message="Something went wrong"),
+	})
 	public Person getMsg(@PathParam("param") String msg) {
 		String output = "Jax-rs REST API : " + msg;
 		Person p = new Person();
@@ -33,7 +42,25 @@ public class HelloWorldExample {
 		return p;
 	}
 	
+	@GET
+	@Path("/")	
+	@Produces(MediaType.APPLICATION_JSON)
+	@ApiOperation(value = "say hello world, sanket", notes ="nothing else than sanket")
+	@ApiResponses(value={
+			@ApiResponse(code=200, message="OK"),
+			@ApiResponse(code=500, message="Something went wrong"),
+	})
+	public Response getMsg() {
+		
+		return Response.status(200).entity("Hellow world").build();
+		
+	}
+	
 	class Person implements Serializable {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 3955074699838807226L;
 		String name;
 		String lastname;
 		public String getName() {
