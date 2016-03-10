@@ -30,4 +30,5 @@ API 02
 Point your swagger UI dist/index.html to this swagger.json to see the documentation
 
 Referred from https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-Jersey-2.X-Project-Setup-1.5
-Also refer to http://stackoverflow.com/a/35905560/5076414
+
+Also refer to my contribution at  http://stackoverflow.com/a/35905560/5076414
