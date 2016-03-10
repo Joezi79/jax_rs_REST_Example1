@@ -31,4 +31,6 @@ Point your swagger UI dist/index.html to this swagger.json to see the documentat
 
 Referred from https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-Jersey-2.X-Project-Setup-1.5
 
-Also refer to my contribution at  http://stackoverflow.com/a/35905560/5076414
+**How to integrate swagger with jax-rs:** http://stackoverflow.com/a/35905415/5076414
+
+An alternate way: http://stackoverflow.com/a/35905560/5076414
