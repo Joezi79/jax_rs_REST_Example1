@@ -17,3 +17,9 @@ Open follwoing URL from browser or REST client -> `http://localhost:8080/jax_rs/
 	 * @return JSON object with "Jax-rs REST API : sanket"
 	 * @see http://www.mkyong.com/webservices/jax-rs/jersey-hello-world-example/
 	 * @see http://www.mkyong.com/webservices/jax-rs/json-example-with-jersey-jackson/
+
+## Swagger
+Refer to https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-Jersey-2.X-Project-Setup-1.5
+
+- run on server for swagger JSON: http://localhost:8080/jax_rs/rest/swagger.json
+- yaml: http://localhost:8080/jax_rs/rest/swagger.yaml
