@@ -1,13 +1,9 @@
 package com.ibm.api;
 
-import java.io.Serializable;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,7 +18,7 @@ public class HelloWorldExample {
 
 	
 	@GET
-	@Path("/")	
+	@Path("/world")	
 	@ApiOperation(value = "say hello world, sanket", notes ="nothing else than sanket")
 	@Produces(MediaType.TEXT_PLAIN)
 	@ApiResponses(value={

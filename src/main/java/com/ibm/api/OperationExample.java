@@ -1,13 +1,10 @@
 package com.ibm.api;
 
-import java.io.Serializable;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -30,7 +27,7 @@ public class OperationExample {
 	@GET
 	@Path("/add/{left}/{right}")	
 	@Produces(MediaType.APPLICATION_JSON)
-	@ApiOperation(value = "say hello world", notes ="nothing else")
+	@ApiOperation(value = "add operation", notes ="adds two integers")
 	@ApiResponses(value={
 			@ApiResponse(code=200, message="OK"),
 			@ApiResponse(code=500, message="Something went wrong"),
