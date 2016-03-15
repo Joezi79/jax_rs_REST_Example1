@@ -13,6 +13,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.jaxrs.config.BeanConfig;
 
 public class Bootstrap extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5122569224602492242L;
+
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
@@ -30,7 +35,7 @@ public class Bootstrap extends HttpServlet {
 					host = uris.get(0).asText();
 					System.out.println("vcap_application URI = " + host);
 				}
-					
+
 			} catch (JsonProcessingException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -41,10 +46,20 @@ public class Bootstrap extends HttpServlet {
 
 		BeanConfig beanConfig = new BeanConfig();
 		beanConfig.setVersion("1.0.0");
+		
+		beanConfig.setTitle("My Javaee JAXRS REST API");
+		beanConfig.setDescription("This is a sample Javaee JAXRS REST API integrated with Swagger.  You can find out more about Swagger "
+				+ "at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/). ");
+		beanConfig.setTermsOfServiceUrl("http://helloreverb.com/terms/");
+		beanConfig.setContact("sanketsw@au1.ibm.com"); 
+		beanConfig.setLicense("Apache 2.0");
+		beanConfig.setLicenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html");
+		
 		beanConfig.setSchemes(new String[] { "http" });
 		beanConfig.setHost(host);
 		beanConfig.setBasePath("/rest");
 		beanConfig.setResourcePackage("com.ibm.api");
 		beanConfig.setScan(true);
 	}
+
 }
