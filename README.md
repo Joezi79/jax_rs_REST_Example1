@@ -8,7 +8,7 @@ run on server -> tested on tomcat 8.0
 Open follwoing URL from browser or REST client -> `http://localhost:8080/jax_rs/rest/hello/`
 
 ## Host on IBM Bluemix 
-`cf push jax_rs_sanket -p jax_rs.war`
+`[root@localhost jax_rs_REST_Example]#cf push api-jaxrs-sanket -p target/jax_rs.war -b java_buildpack`
 
 ## Output
 API 01
